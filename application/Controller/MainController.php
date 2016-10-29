@@ -11,8 +11,6 @@ use System\BaseController;
  */
 class MainController extends BaseController
 {
-    public $bla = 'a';
-    public function blaz() {
-        return 'va';
-    }
+    protected $pageName = 'Main';
+
 }

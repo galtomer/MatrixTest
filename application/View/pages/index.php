@@ -1,5 +1,4 @@
+<p>
+    <input type="text" class="form-control typeahead" style="width:900px !important;" placeholder="Type any vehicle parts by manufacturer, model name or year...">
 
-
-<!-- Add your site or application content here -->
-<p>Hello world! This is HTML5 Boilerplate.</p>
-
+</p>

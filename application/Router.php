@@ -31,13 +31,20 @@ class Router
 
     public function start()
     {
+        $rp = explode('?', $_SERVER["REQUEST_URI"], 2);
+        $requestUri = $rp[0];
+        if (count($rp) > 1)
+            parse_str($rp[1],$requestParams);
+        else
+            $requestParams = [];
+
         // get current URL route and search for it, if found use it
-        if (!array_key_exists($_SERVER['REQUEST_URI'],$this->routes))
-            throw new AppException("Request URI does not have a route: " . $_SERVER['REQUEST_URI']);
+        if (!array_key_exists($requestUri,$this->routes))
+            throw new AppException("Request URI does not have a route: " . $requestUri);
 
-        $routeCallback = $this->routes[$_SERVER['REQUEST_URI']];
+        $routeCallback = $this->routes[$requestUri];
 
-        $view = call_user_func($routeCallback);
+        $view = call_user_func_array($routeCallback,$requestParams);
 
 
     }

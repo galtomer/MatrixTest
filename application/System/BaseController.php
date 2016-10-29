@@ -11,7 +11,7 @@ use Model\AppException;
  */
 class BaseController
 {
-    private $pageName = 'Main';
+    protected $pageName = 'Main';
     private $page;
 
     public function render($viewPath)

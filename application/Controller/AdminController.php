@@ -11,7 +11,10 @@ use System\BaseController;
  */
 class AdminController extends BaseController
 {
-    public $bla = 'a';
+    protected $pageName = 'Admin';
+    public function __construct() {
+
+    }
     public function blaz() {
         return 'va';
     }

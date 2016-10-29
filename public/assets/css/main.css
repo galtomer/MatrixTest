@@ -1,0 +1,14 @@
+body {
+  font-family: Verdana, Tahoma, sans-serif; }
+  body footer {
+    font-size: 12px;
+    text-align: center; }
+  body .page_container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; }
+    body .page_container .container {
+      width: 1000px;
+      margin: 0 auto; }
+
+/*# sourceMappingURL=main.css.map */
