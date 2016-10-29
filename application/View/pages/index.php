@@ -1,0 +1,1 @@
+bla <?php echo $this->blaz(); ?>
