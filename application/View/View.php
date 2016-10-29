@@ -12,7 +12,6 @@ use System\BaseView;
  */
 class View extends BaseView
 {
-    private $generatedView;
 
     function __construct($viewPath,BaseController $controller)
     {

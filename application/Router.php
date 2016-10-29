@@ -21,6 +21,8 @@ class Router
         if (self::$instance == null)
             self::$instance = new Router();
 
+//        $params = self::$instance->getPathParams($path);
+
         if (in_array($path,self::$instance->routes))
             throw new AppException("Duplicate routers found for path: " . $path);
 
@@ -39,6 +41,18 @@ class Router
 
 
     }
+
+//    public function getPathParams($path) {
+//        $params = explode('/',$path);
+//        $ret = [];
+//        foreach($params as $param) {
+//            if (substr($param,0,1) == ":")
+//            {
+//                array_push($ret,substr($param,1,strlen($param)-1));
+//            }
+//        }
+//        return $ret;
+//    }
 
     public static function getInstance() { return self::$instance; }
 
